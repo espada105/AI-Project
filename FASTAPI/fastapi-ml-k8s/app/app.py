@@ -3,7 +3,7 @@ from pydantic import BaseModel
 import joblib
 import numpy as np
 
-model = joblib.load('../../model.pkl')
+model = joblib.load('model/model.pkl')
 app = FastAPI(title = "Simple ML Service")
 
 class PredictRequest(BaseModel):

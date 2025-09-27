@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-api-deployment
+  labels:
+    app: ml-api
+spec:
+  replicas: 2  # 컨테이너 2개 유지 (고가용성)
+  selector:
+    matchLabels:
+      app: ml-api
+  template:
+    metadata:
+      labels:
+        app: ml-api
+    spec:
+      containers:
+      - name: ml-api-container
+        image: espada105/fastapi-ml-app:v1 
+        ports:
+        - containerPort: 8000 # FastAPI가 실행되는 포트
+        resources: # 자원 사용량 제한 (선택 사항)
+          limits:
+            memory: "128Mi"
+            cpu: "500m"

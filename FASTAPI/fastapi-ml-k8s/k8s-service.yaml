@@ -1,0 +1,13 @@
+# k8s-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: ml-api-service
+spec:
+  selector:
+    app: ml-api  # Deployment에서 정의한 라벨과 일치해야 함
+  ports:
+    - protocol: TCP
+      port: 80 # 서비스가 노출할 포트
+      targetPort: 8000 # 컨테이너 포트
+  type: LoadBalancer # 외부 접근을 위한 서비스 타입 (클라우드 환경에서는 LoadBalancer 사용)
