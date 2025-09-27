@@ -1,3 +1,4 @@
 /FASTAPI/.venv
 /FASTAPI/__pycache__
 /FASTAPI/practice/.venv
+/FASTAPI/fastapi-ml-k8s/.venv
