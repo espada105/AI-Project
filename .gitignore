@@ -3,3 +3,5 @@
 /FASTAPI/practice/.venv
 /FASTAPI/fastapi-ml-k8s/.venv
 /FASTAPI/fastapi-pre/.venv
+/study
+.env
