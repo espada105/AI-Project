@@ -1,17 +1,17 @@
-"""
-FastMCP 학습용 - 최소 예제.
-실행: python main.py
-"""
-from mcp.server.fastmcp import FastMCP
+from fastapi import FastAPI
+from pydantic import BaseModel
+import chatbot
 
-mcp = FastMCP("my-first-mcp")
+app = FastAPI()
 
+class ChatRequest(BaseModel):
+    message: str
 
-@mcp.tool()
-def add(a: int, b: int) -> int:
-    """두 수를 더합니다."""
-    return a + b
-
+@app.post("/chat")
+async def chat_endpoint(req: ChatRequest):
+    response = chatbot.ask_gpt(req.message)
+    return {"reply": response}
 
 if __name__ == "__main__":
-    mcp.run()
+    import uvicorn
+    uvicorn.run(app, host = "0.0.0.0", port = 8000)
