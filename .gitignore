@@ -5,6 +5,7 @@
 /FASTAPI/fastapi-pre/.venv
 /study
 .env
+
 /fastmcp-satellite/venv
 /fastmcp-satellite/data
 
@@ -19,3 +20,6 @@ venv/
 
 # OS / editor
 .DS_Store
+=======
+/LangChain/.venv
+
