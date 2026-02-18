@@ -5,3 +5,17 @@
 /FASTAPI/fastapi-pre/.venv
 /study
 .env
+/fastmcp-satellite/venv
+/fastmcp-satellite/data
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
