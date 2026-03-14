@@ -10,6 +10,7 @@
 /fastmcp-satellite/data
 
 # Python
+/fastmcp-satellite/__pycache__
 __pycache__/
 *.py[cod]
 *$py.class
