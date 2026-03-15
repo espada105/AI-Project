@@ -10,6 +10,7 @@
 /fastmcp-satellite/data
 
 # Python
+/fastmcp-satellite/__pycache__
 __pycache__/
 *.py[cod]
 *$py.class
@@ -24,3 +25,5 @@ venv/
 
 .env
 /LangChain/.venv
+UV_test/uv-demo/requirements.txt
+UV_test/uv-demo/uv.lock
